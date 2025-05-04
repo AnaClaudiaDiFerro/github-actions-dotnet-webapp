@@ -1,0 +1,15 @@
+name: criando um workflow sozinha
+
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *'  # executa a cada hora em ponto
+  workflow_dispatch: 
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Exibindo mensagem
+        run: echo "Workflow executado com sucesso!"
